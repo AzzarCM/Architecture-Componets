@@ -2,10 +2,10 @@ package com.example.architecturecomponents.Repositories
 
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
-import com.example.architecturecomponents.Dao.wordDao
+import com.example.architecturecomponents.Dao.WordDao
 import com.example.architecturecomponents.Model.Word
 
-class WordRepository(private val wordDao: wordDao){
+class WordRepository(private val wordDao: WordDao){
 
     val allWords : LiveData<List<Word>> = wordDao.getAllWords()
 

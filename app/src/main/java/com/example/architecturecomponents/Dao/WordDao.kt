@@ -1,11 +1,14 @@
 package com.example.architecturecomponents.Dao
 
 import androidx.lifecycle.LiveData
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.architecturecomponents.Model.Word
 
-interface wordDao {
+
+@Dao
+interface WordDao {
 
      @Query("SELECT * FROM word_table ORDER BY word ASC")
      fun getAllWords(): LiveData<List<Word>>
